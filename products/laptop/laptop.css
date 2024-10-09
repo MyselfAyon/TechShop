@@ -1,0 +1,14 @@
+ /* Typing Effect */
+ .typing-text {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .typed-cursor {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #007bff;
+  }
+

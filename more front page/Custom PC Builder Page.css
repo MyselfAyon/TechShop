@@ -1,0 +1,70 @@
+/* Global Styling */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Custom PC Builder Section */
+  .custom-pc {
+    background-color: #1a1a1a;
+    padding: 60px 0;
+  }
+  
+  .custom-pc h2 {
+    font-size: 2.5rem;
+    color: #f8f9fa;
+    margin-bottom: 50px;
+  }
+  
+  .custom-pc p {
+    font-size: 1.1rem;
+    color: #cfcfcf;
+    margin-bottom: 40px;
+  }
+  
+  .custom-pc .card {
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-pc .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .custom-pc .card-title {
+    font-size: 1.4rem;
+    color: #f8f9fa;
+  }
+  
+  .custom-pc .form-select {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  .custom-pc .btn-outline-light {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .custom-pc .btn-outline-light:hover {
+    background-color: #fff;
+    color: #1a1a1a;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .custom-pc h2 {
+      font-size: 2rem;
+    }
+  
+    .custom-pc p {
+      font-size: 1rem;
+    }
+  }
+  

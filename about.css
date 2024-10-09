@@ -1,0 +1,94 @@
+/* Global Styling */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* About Section */
+  .about {
+    background-color: #1a1a1a; /* Dark background for the about section */
+    padding: 50px 0;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    color: #f8f9fa;
+    margin-bottom: 30px;
+  }
+  
+  .about p {
+    font-size: 1.1rem;
+    color: #cfcfcf;
+  }
+  
+  .about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Our Values Section */
+  .values {
+    background-color: #2a2a2a;
+    padding: 50px 0;
+  }
+  
+  .values h2 {
+    font-size: 2.5rem;
+    color: #f8f9fa;
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card-body {
+    padding: 30px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    color: #f8f9fa;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #cfcfcf;
+  }
+  
+  .card i {
+    color: #007bff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about h2 {
+      font-size: 2rem;
+    }
+  
+    .values h2 {
+      font-size: 2rem;
+    }
+  
+    .card-title {
+      font-size: 1.2rem;
+    }
+  
+    .card-text {
+      font-size: 0.9rem;
+    }
+  }
+  

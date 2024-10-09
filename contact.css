@@ -1,0 +1,84 @@
+/* Global Styling */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Contact Section */
+  .contact {
+    background-color: #1a1a1a;
+    padding: 50px 0;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    color: #f8f9fa;
+    margin-bottom: 50px;
+  }
+  
+  .contact h4 {
+    font-size: 1.8rem;
+    color: #f8f9fa;
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    font-size: 1.1rem;
+    color: #cfcfcf;
+  }
+  
+  .contact ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .contact ul li {
+    font-size: 1.1rem;
+    color: #cfcfcf;
+    margin-bottom: 10px;
+  }
+  
+  .contact .social-media a {
+    color: inherit;
+  }
+  
+  .contact .social-media a:hover {
+    color: #007bff;
+  }
+  
+  .contact .form-label {
+    color: #cfcfcf;
+  }
+  
+  .contact .form-control {
+    background-color: #333;
+    border-color: #444;
+    color: #fff;
+  }
+  
+  .contact .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .contact .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact h2 {
+      font-size: 2rem;
+    }
+  
+    .contact h4 {
+      font-size: 1.5rem;
+    }
+  
+    .contact p {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,515 @@
+/* Global Styling */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Header Section */
+  .header-section {
+    background-color: #1a1a1a; /* Dark background for the header */
+    padding: 15px 0;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #f8f9fa; /* Light color for nav links */
+    margin-right: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #007bff; /* Blue hover effect for nav links */
+  }
+  
+  .navbar-dark .navbar-toggler {
+    border-color: #fff; /* Light color for the toggle button */
+  }
+  
+  /* Brand Logo and Name */
+  .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .brand-name {
+    color: #f8f9fa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .brand-name {
+      font-size: 1.2rem;
+    }
+  }
+  
+
+
+  
+ /* Hero Section Styling */
+.hero-section {
+    position: relative;
+    background-image: url('gaming-keyboard-led-rgb-backlight-260nw-1805674678.webp') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    animation-duration: 1s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    animation-duration: 1.5s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Typing Effect */
+  .typing-text {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .typed-cursor {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #007bff;
+  }
+  
+  /* Buttons Styling */
+  .btn-group .btn {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-outline-light {
+    border: 2px solid white;
+    color: white;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .typing-text {
+      font-size: 1rem;
+    }
+  
+    .btn-group .btn {
+      font-size: 1rem;
+      padding: 8px 20px;
+    }
+  }
+  /* Buttons Styling */
+  .btn-group .btn {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-outline-light {
+    border: 2px solid white;
+    color: white;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .btn-group .btn {
+      font-size: 1rem;
+      padding: 8px 20px;
+    }
+  }
+  
+/* Featured Categories Section */
+.featured-categories {
+    background: linear-gradient(to right, rgba(18, 18, 18, 0.9), rgba(42, 42, 42, 0.9)), 
+                url('https://via.placeholder.com/1600x900') center/cover no-repeat; /* Gradient over background image */
+    background-attachment: fixed; /* Creates a parallax effect */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .featured-categories h2 {
+    font-size: 2.5rem;
+    color: #f8f9fa;
+    margin-bottom: 50px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* Category Card Styling */
+  .category-card {
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .category-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-container {
+    position: relative;
+  }
+  
+  .card-img-top {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-img-container:hover .card-img-top {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  /* Overlay with Icon */
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-img-container:hover .card-overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  
+  .card-overlay i {
+    color: #919191;
+  }
+  
+  /* Card Content */
+  .category-card .card-body {
+    padding: 20px;
+  }
+  
+  .category-card .card-title {
+    font-size: 1.5rem;
+    color: #f8f9fa;
+  }
+  
+  .category-card .card-text {
+    color: #929292;
+  }
+  
+  .category-card .btn {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-card .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .category-card .card-img-top {
+      height: 150px;
+    }
+  
+    .category-card .card-title {
+      font-size: 1.3rem;
+    }
+  
+    .category-card .card-text {
+      font-size: 0.9rem;
+    }
+  }
+
+  #testimonials {
+    padding: 80px 0;
+}
+
+.testimonial-card {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 6px 12px rgba(255, 255, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.card-body h5 {
+    font-weight: bold;
+    color: #ffc107; /* Yellow color for the names */
+}
+
+.card-body p {
+    color: #ff0000; /* Red color for the roles */
+}
+
+/* Carousel controls styling */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #ff0000; /* Red controls */
+    border-radius: 50%;
+    padding: 10px;
+}
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.promo-section {
+  background-color: #000; /* Black background */
+  color: #ffeb3b; /* Yellow text */
+}
+
+.promo-title {
+  font-size: 2.5rem;
+  color: #ffeb3b; /* Yellow */
+}
+
+.countdown-timer h3 {
+  color: #ff4444; /* Red */
+}
+
+#countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffeb3b; /* Yellow for countdown numbers */
+}
+
+.promo-card {
+  background-color: #1c1c1c; /* Dark grey background */
+  color: #fff;
+  border: 2px solid #ff4444; /* Red border */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.promo-card:hover {
+  transform: scale(1.05); /* Card scaling animation */
+}
+
+.promo-card h4 {
+  color: #ffeb3b; /* Yellow for promo heading */
+}
+
+.promo-card p {
+  color: #ffeb3b; /* Yellow for promo details */
+}
+
+.btn-danger {
+  background-color: #ff4444; /* Red */
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #ff1c1c; /* Darker red on hover */
+}
+
+#countdown span {
+  background-color: #ff4444; /* Red background for each part */
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+}
+/* Newsletter Section Styling */
+.newsletter-section {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+}
+
+.newsletter-heading {
+  font-size: 2rem;
+  color: #ffdd00; /* Yellow text */
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+.newsletter-text {
+  font-size: 1.2rem;
+  color: #ff4444; /* Red text */
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.email-input {
+  padding: 10px;
+  border: 2px solid #ffdd00; /* Yellow border */
+  border-radius: 50px;
+  background-color: #1a1a1a; /* Darker black */
+  color: #fff;
+}
+
+.email-input::placeholder {
+  color: #ff4444; /* Red placeholder */
+}
+
+.subscribe-btn {
+  background-color: #ff4444; /* Red background */
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.subscribe-btn:hover {
+  background-color: #ffdd00; /* Yellow hover */
+  color: #000;
+}
+
+/* Animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Footer Styling */
+.footer {
+  background-color: #000; /* Black background */
+}
+
+.footer h5 {
+  letter-spacing: 2px;
+}
+
+.footer p, .footer a {
+  color: #fff;
+}
+
+.footer a.footer-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a.footer-link:hover {
+  color: #ffcc00; /* Yellow color hover effect */
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ff0000; /* Red color on hover */
+  transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+}

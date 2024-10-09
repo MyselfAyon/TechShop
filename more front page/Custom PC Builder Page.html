@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom PC Builder | TechShop</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Custom PC Builder Page.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">TechShop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Custom PC Builder Section -->
+  <section class="custom-pc py-5 bg-dark text-light">
+    <div class="container">
+      <h2 class="display-4 text-center mb-5" style="color: rgb(255, 0, 0);">Build Your Custom PC</h2>
+      <p class="lead text-center mb-4" style="color: rgb(255, 153, 0);">Select the components below to build the ultimate PC tailored to your needs.</p>
+
+      <!-- Component Selection -->
+      <div class="row">
+        <!-- CPU Selection -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-warning text-light">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black;">Choose CPU</h5>
+              <select class="form-select" id="cpuSelect">
+                <option value="0" data-price="0">Select CPU</option>
+                <option value="Intel Core i9" data-price="499">Intel Core i9 - $499</option>
+                <option value="AMD Ryzen 9" data-price="450">AMD Ryzen 9 - $450</option>
+                <option value="Intel Core i7" data-price="350">Intel Core i7 - $350</option>
+                <option value="AMD Ryzen 7" data-price="300">AMD Ryzen 7 - $300</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- GPU Selection -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-warning text-light">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black;">Choose GPU</h5>
+              <select class="form-select" id="gpuSelect">
+                <option value="0" data-price="0">Select GPU</option>
+                <option value="NVIDIA RTX 4090" data-price="1599">NVIDIA RTX 4090 - $1599</option>
+                <option value="NVIDIA RTX 4080" data-price="1199">NVIDIA RTX 4080 - $1199</option>
+                <option value="AMD Radeon RX 7900 XTX" data-price="999">AMD Radeon RX 7900 XTX - $999</option>
+                <option value="AMD Radeon RX 7800 XT" data-price="799">AMD Radeon RX 7800 XT - $799</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Motherboard Selection -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-warning text-light">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black;">Choose Motherboard</h5>
+              <select class="form-select" id="motherboardSelect">
+                <option value="0" data-price="0">Select Motherboard</option>
+                <option value="ASUS ROG Strix Z790-E" data-price="350">ASUS ROG Strix Z790-E - $350</option>
+                <option value="MSI MPG X670E" data-price="300">MSI MPG X670E - $300</option>
+                <option value="Gigabyte Aorus X670 Master" data-price="320">Gigabyte Aorus X670 Master - $320</option>
+                <option value="ASRock B550 Steel Legend" data-price="150">ASRock B550 Steel Legend - $150</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- RAM Selection -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-warning text-light">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black;">Choose RAM</h5>
+              <select class="form-select" id="ramSelect">
+                <option value="0" data-price="0">Select RAM</option>
+                <option value="Corsair Vengeance 32GB DDR5" data-price="150">Corsair Vengeance 32GB DDR5 - $150</option>
+                <option value="G.Skill Trident Z5 RGB 32GB DDR5" data-price="180">G.Skill Trident Z5 RGB 32GB DDR5 - $180</option>
+                <option value="Kingston Fury Beast 16GB DDR4" data-price="80">Kingston Fury Beast 16GB DDR4 - $80</option>
+                <option value="TeamGroup T-Force Delta 16GB DDR5" data-price="120">TeamGroup T-Force Delta 16GB DDR5 - $120</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Storage Selection -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-warning text-light">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black;">Choose Storage</h5>
+              <select class="form-select" id="storageSelect">
+                <option value="0" data-price="0">Select Storage</option>
+                <option value="Samsung 980 Pro 1TB" data-price="150">Samsung 980 Pro 1TB - $150</option>
+                <option value="WD Black SN850 1TB" data-price="120">WD Black SN850 1TB - $120</option>
+                <option value="Crucial P5 Plus 1TB" data-price="100">Crucial P5 Plus 1TB - $100</option>
+                <option value="Seagate FireCuda 2TB" data-price="200">Seagate FireCuda 2TB - $200</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- PSU Selection -->
+        <div class="col-md-4 mb-4">
+          <div class="card bg-warning text-light">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black;">Choose Power Supply</h5>
+              <select class="form-select" id="psuSelect">
+                <option value="0" data-price="0">Select Power Supply</option>
+                <option value="Corsair RM850x 850W" data-price="120">Corsair RM850x 850W - $120</option>
+                <option value="EVGA SuperNova 750W" data-price="100">EVGA SuperNova 750W - $100</option>
+                <option value="Cooler Master MWE 650W" data-price="60">Cooler Master MWE 650W - $60</option>
+                <option value="Seasonic Focus 750W" data-price="110">Seasonic Focus 750W - $110</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- submit button -->
+     <div class="row">
+        <div class="col-12 text-center">
+          <a href="https://www.startech.com.bd/tool/pc_builder"><button type="submit" class="btn btn-lg btn-outline-light">Build My PC</button></a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  

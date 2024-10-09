@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Shop Landing Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+
+  <style>
+    body {
+        background-color: #ffffff73;
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .product-card {
+        background-color: #2c2c2e;
+        border-radius: 10px;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 10px 20px rgb(255, 255, 255);
+    }
+
+    .product-card img {
+        border-radius: 10px;
+        max-height: 180px;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+        transform: scale(1.1);
+    }
+
+    .product-title {
+        font-size: 1.2rem;
+        margin-top: 15px;
+        color: #ffffff;
+    }
+
+    .product-price {
+        color: #ff0000;
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .btn-outline-light {
+        color: #ff0000;
+        border-color: #f8f8f8;
+    }
+
+    .btn-outline-light:hover {
+        background-color: #ffee00;
+        border-color: #fbff00;
+        color: #000000;
+    }
+    
+    /* Sale badge */
+    .sale-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #ff5252;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        z-index: 1;
+    }
+</style>
+
+<style>
+  body {
+    background-color: #1f1e1e;
+    color: rgb(0, 0, 0);
+  }
+
+  .trust-section {
+    padding: 50px 0;
+    background-color: #222222;
+    text-align: center;
+  }
+
+  .trust-section h2 {
+    color: #f1c40f;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  .partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .partner-logos img {
+    width: 150px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .partner-logos img:hover {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
+  /* Animation on scroll */
+  .partner-logos img.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .partner-logos img.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+
+</head>
+<body>
+  <!-- Header Section -->
+    <header class="header-section bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+            
+              <span class="brand-name" style="color: rgb(255, 255, 255);">TechShop</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-danger text-light" href="products.html"><span style="color: rgb(0, 0, 0);">Shop Now</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="overlay"></div>
+    <div class="container text-center text-light">
+      <h1 class="hero-title animate__animated animate__fadeInDown"><span style="color: black;">Elevate Your Tech Experience</span></h1>
+      <p class="hero-subtitle animate__animated animate__fadeInUp"><span style="color: rgb(175, 1, 1);">From the best laptops to custom-built PCs, we've got everything you need.</span></p>
+      
+      <!-- Dynamic Typing Effect -->
+      <div class="typing-text">
+        <span class="typed-words" style="color: rgb(255, 255, 255);">Latest Laptops | Gaming PCs | Accessories</span>
+      </div>
+
+      <div class="btn-group mt-4">
+        <a href="products.html" class="btn btn-danger btn-lg me-2 animate__animated animate__fadeInLeft">Shop Now</a>
+        <a href="more front page/Custom PC Builder Page.html" class="btn btn-outline-warning btn-lg animate__animated animate__fadeInRight">Build Your Custom PC</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Categories Section -->
+  <section class="featured-categories py-5">
+    <div class="container">
+      <h2 class="text-center text-light mb-5"><span style="color: rgb(255, 255, 255);">Featured Categories</span></h2>
+      <div class="row">
+        <!-- Laptops Category -->
+        <div class="col-md-4 mb-4">
+          <div class="card category-card text-center">
+            <div class="card-img-container">
+              <img src="img/01hiB08j7yaJGJmPl2YhRRH-59.webp" height="250px" width="100px" class="card-img-top" alt="Laptops">
+              <div class="card-overlay">
+                <i class="fas fa-laptop fa-3x"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Laptops</h5>
+              <p class="card-text">Explore the latest range of high-performance laptops.</p>
+              <a href="products/laptop/laptop.html" class="btn btn-danger">Explore Laptops</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gaming PCs Category -->
+        <div class="col-md-4 mb-4">
+          <div class="card category-card text-center">
+            <div class="card-img-container">
+              <img src="products/laptop/Gaming pc/img/11062b_e3f9fc23bef84dd0bc53f426efdc2e35~mv2.webp" height="226px" width="100px" class="card-img-top" alt="Gaming PCs">
+              <div class="card-overlay">
+                <i class="fas fa-desktop fa-3x"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Gaming PCs</h5>
+              <p class="card-text">Custom-built gaming rigs for unbeatable performance.</p>
+              <a href="products/laptop/Gaming pc/pc.html" class="btn btn-danger">Explore Gaming PCs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessories Category -->
+        <div class="col-md-4 mb-4">
+          <div class="card category-card text-center">
+            <div class="card-img-container">
+              <img src="img/PC-accessories-scaled.jpg" height="250px" width="100px" class="card-img-top" alt="Accessories">
+              <div class="card-overlay">
+                <i class="fas fa-headphones-alt fa-3x"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Accessories</h5>
+              <p class="card-text">Get the best accessories to complete your setup.</p>
+              <a href="products/laptop/Accessories/Accessories.html" class="btn btn-danger">Explore Accessories</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monitors Category -->
+        <div class="col-md-4 mb-4">
+          <div class="card category-card text-center">
+            <div class="card-img-container">
+              <img src="products/laptop/Monitors/img/Predator_X27_design_ksp_1_large_2x3.png" height="250px" width="100px" class="card-img-top" alt="Monitors">
+              <div class="card-overlay">
+                <i class="fas fa-tv fa-3x"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Monitors</h5>
+              <p class="card-text">High-definition monitors for gaming and work.</p>
+              <a href="products/laptop/Monitors/Monitors.html" class="btn btn-danger">Explore Monitors</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Keyboards Category -->
+        <div class="col-md-4 mb-4">
+          <div class="card category-card text-center">
+            <div class="card-img-container">
+              <img src="products/laptop/Accessories/img/Mechanical-Keyboard-Guide-Gear-GettyImages-1313504623.webp" height="225px" width="100px" class="card-img-top" alt="Keyboards">
+              <div class="card-overlay">
+                <i class="fas fa-keyboard fa-3x"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Keyboards</h5>
+              <p class="card-text">Mechanical and RGB keyboards for typing enthusiasts.</p>
+              <a href="products/laptop/Accessories/Accessories.html" class="btn btn-danger">Explore Keyboards</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Headphones Category -->
+        <div class="col-md-4 mb-4">
+          <div class="card category-card text-center">
+            <div class="card-img-container">
+              <img src="products/laptop/Accessories/img/Wireless-gaming-headset_edited.webp" height="250px" width="100px" class="card-img-top" alt="Headphones">
+              <div class="card-overlay">
+                <i class="fas fa-headphones fa-3x"></i>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Headphones</h5>
+              <p class="card-text">Noise-cancelling headphones for immersive sound.</p>
+              <a href="products/laptop/Accessories/Accessories.html" class="btn btn-danger">Explore Headphones</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="featured-categories">
+
+  <!-- Product Highlights Section -->
+<div class="container py-5">
+  <h2 class="text-center mb-5" style="color: rgb(255, 0, 0);">Best Sellers</h2>
+  <div class="row">
+      <!-- Product 1 -->
+      <div class="col-md-4 mb-4">
+          <div class="product-card">
+              <div class="sale-badge">Sale</div>
+              <img src="img/aaaaaaaaaaaa3.webp" alt="Product 1">
+              <h5 class="product-title">Gaming Laptop XYZ</h5>
+              <p class="product-price">$1,299.99</p>
+              <a href="#" class="btn btn-outline-light btn-sm">Add to Cart</a>
+          </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-4 mb-4">
+          <div class="product-card">
+              <img src="img/images (1).jpg" alt="Product 2">
+              <h5 class="product-title">High-Performance GPU</h5>
+              <p class="product-price">$799.99</p>
+              <a href="#" class="btn btn-outline-light btn-sm">Add to Cart</a>
+          </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-4 mb-4">
+          <div class="product-card">
+              <img src="img/ultrawide.webp" alt="Product 3">
+              <h5 class="product-title">Ultra-Wide Monitor</h5>
+              <p class="product-price">$499.99</p>
+              <a href="#" class="btn btn-outline-light btn-sm">Add to Cart</a>
+          </div>
+      </div>
+  </div>
+</div>
+  <hr class="featured-categories">
+
+<section id="testimonials" class="py-5" style="background-color: #000;">
+  <div class="container">
+      <div class="text-center mb-5">
+          <h2 class="text-uppercase text-warning">What Our Customers Say</h2>
+          <p class="text-danger">Trusted by thousands of tech enthusiasts!</p>
+      </div>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <!-- Testimonial 1 -->
+              <div class="carousel-item active">
+                <div class="testimonial-card text-center">
+                    <div class="card-body">
+                        <p class="testimonial-text text-white">"The customer support was amazing! I needed advice on upgrading my gaming rig, and the team walked me through the entire process. I ended up with a beast of a PC!"</p>
+                        <h5 class="text-warning">Alex Morgan</h5>
+                        <p class="text-danger">PC Gamer & Streamer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="carousel-item">
+                <div class="testimonial-card text-center">
+                    <div class="card-body">
+                        <p class="testimonial-text text-white">"I ordered a custom-built PC and it arrived faster than expected! The build quality is top-notch, and I've already recommended this shop to all my friends."</p>
+                        <h5 class="text-warning">Sarah Thompson</h5>
+                        <p class="text-danger">Graphic Designer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="carousel-item">
+                <div class="testimonial-card text-center">
+                    <div class="card-body">
+                        <p class="testimonial-text text-white">"Found the best deals on high-end components here. Managed to grab an RTX 3080 at a great price, and the checkout process was smooth and easy. Five stars!"</p>
+                        <h5 class="text-warning">David Clarke</h5>
+                        <p class="text-danger">Hardware Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="carousel-item">
+                <div class="testimonial-card text-center">
+                    <div class="card-body">
+                        <p class="testimonial-text text-white">"As a professional video editor, I needed a powerful workstation. They helped me configure the perfect setup, and it runs all my editing software effortlessly!"</p>
+                        <h5 class="text-warning">Emily Williams</h5>
+                        <p class="text-danger">Professional Video Editor</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 5 -->
+            <div class="carousel-item">
+                <div class="testimonial-card text-center">
+                    <div class="card-body">
+                        <p class="testimonial-text text-white">"Upgraded my entire office setup with their help! The pricing was competitive, and the customer service made everything easy from start to finish."</p>
+                        <h5 class="text-warning">Michael Patel</h5>
+                        <p class="text-danger">IT Consultant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+</section>
+
+<hr class="featured-categories">
+
+<section class="promo-section text-center py-5">
+  <div class="container">
+    <h2 class="promo-title mb-4" style="color: whitesmoke;">Special Offers Just for You!</h2>
+
+    <!-- Offers Row -->
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="promo-card">
+          <h4 style="color: whitesmoke;">20% OFF on Gaming Laptops</h4>
+          <p style="color: rgb(168, 168, 168);">Use Code: <strong style="color: rgb(255, 0, 0);">GAME20</strong></p>
+          <a href="products.html"><button class="btn btn-outline-warning ">Shop Now</button></a> 
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="promo-card">
+          <h4 style="color: whitesmoke;">15% OFF on Accessories</h4>
+          <p style="color: rgb(168, 168, 168);">Use Code: <strong style="color: rgb(255, 0, 0);">ACCESS15</strong></p>
+          <a href="products.html"><button class="btn btn-outline-warning">Shop Now</button></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="promo-card">
+          <h4 style="color: whitesmoke;">Free Shipping on Orders over $50</h4>
+          <p style="color: rgb(168, 168, 168);">No Code Needed</p>
+          <a href="products.html"><button class="btn btn-outline-warning">Shop Now</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="featured-categories">
+
+<section class="newsletter-section text-center py-5">
+  <div class="container">
+    <h2 class="newsletter-heading mb-3" style="color: #ff0000;">Stay Updated with the Latest Tech Deals</h2>
+    <p class="newsletter-text mb-4" style="color: #ffe600;">Subscribe to our newsletter and get exclusive offers directly in your inbox.</p>
+    <form class="newsletter-form row justify-content-center">
+      <div class="col-md-6">
+        <input type="email" class="form-control email-input" placeholder="Enter your email" required>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-outline-danger">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+ <!-- Trust Section -->
+ <div class="trust-section">
+  <h2>Trusted By Leading Brands</h2>
+  <div class="partner-logos">
+    <a href="https://www.intel.com/content/www/us/en/homepage.html" target="_blank"><img src="img/Intel_1599127503950_1599127526950.avif" alt="Intel Logo" class="animate"></a>
+    <a href="https://www.nvidia.com/en-us/" target="_blank"><img src="img/11.webp" alt="NVIDIA Logo" class="animate"></a>
+    <a href="https://www.asus.com/bd/" target="_blank"><img src="img/1513882474746.webp" alt="Asus Logo" class="animate"></a>
+    <a href="https://www.amd.com/en.html" target="_blank"><img src="img/8.webp" alt="AMD Logo" class="animate"></a>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer bg-black text-white pt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- About Us Section -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5 class="text-uppercase text-warning mb-4">About Us</h5>
+        <p class="text-light">
+          We provide the best tech deals with top-quality products, including custom PCs, gaming rigs, and more. Fast shipping and excellent customer support!
+        </p>
+      </div>
+
+      <!-- Useful Links Section -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5 class="text-uppercase text-danger mb-4">Useful Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="products.html" class="text-white footer-link">Shop</a></li>
+          <li><a href="contact.html" class="text-white footer-link">Support</a></li>
+          <li><a href="about.html" class="text-white footer-link">Terms of Service</a></li>
+          <li><a href="about.html" class="text-white footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us Section -->
+      <div class="col-lg-4 col-md-12 mb-4">
+        <h5 class="text-uppercase text-warning mb-4">Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill text-danger"></i> 123 Tech Street, Silicon Valley, CA</p>
+        <a href="https://myselfayon.github.io/My-site/" target="_blank"><p class="text-danger"> Contact Developer</p></a>
+        <p><i class="bi bi-telephone-fill text-danger"></i> +880191*******</p> 
+
+        <!-- Social Media Icons -->
+        <div class="social-icons mt-3">
+          <a href="#" class="footer-icon text-white me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-icon text-white me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="footer-icon text-white me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="footer-icon text-white me-3"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom mt-4 text-center">
+      <p class="text-muted">&copy; 2024 TechShop. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS & Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<!-- Scroll Animation Script -->
+<script>
+  window.addEventListener('scroll', function() {
+    const logos = document.querySelectorAll('.partner-logos img');
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    logos.forEach(function(logo) {
+      if (logo.offsetTop < scrollPosition) {
+        logo.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Typed.js for Typing Effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Custom JS -->
+  <script>
+    // Typed.js effect for dynamic text
+    var typed = new Typed('.typed-words', {
+      strings: ["Latest Laptops", "Gaming PCs", "Accessories"],
+      typeSpeed: 70,
+      backSpeed: 60,
+      loop: true
+    });
+  </script>
+</body>
+</html>
